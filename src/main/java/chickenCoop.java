@@ -1,2 +1,13 @@
-public class chickenCoop {
+public class chickenCoop extends  Storage<Chicken>{
+
+
+    public chickenCoop()
+    {
+
+    }
+
+
+
+
+
 }

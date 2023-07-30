@@ -15,7 +15,10 @@ public Farm()
 
 }
 
-
+  public Farmhouse getFarmhouse()
+  {
+    return farmhouse;
+  }
 
 
 
@@ -30,6 +33,21 @@ public boolean addStable(Stable stable)
   }
   return false;
 }
+
+
+public ArrayList<Vehicle> getVehicles()
+{
+  return this.vehicles;
+
+
+}
+
+
+public String getDayOfWeek()
+{
+  return this.dayOfWeek;
+}
+
 
   public boolean addCoop(chickenCoop coop)
   {
@@ -47,12 +65,79 @@ public boolean addStable(Stable stable)
   {
     return this.coops;
   }
-
-
-
 public ArrayList<Stable> getStables()
 {
   return this.stables;
+}
+
+public ArrayList<Field> getfields()
+{
+  return this.fields;
+}
+
+public boolean removeFarmHouse()
+{
+  this.farmhouse = null;
+  if(this.farmhouse == null)
+  {
+    return true;
+  }
+  else return false;
+}
+
+public boolean checkHorses(ArrayList<Stable> stables)
+{
+for(int i =0; i<stables.size();i++)
+{
+  for(int j=0;j<stables.get(i).size();j++)
+  {
+
+  }
+}
+}
+
+
+public boolean removeCoop(int i)
+{
+  int current =this.coops.size();
+  this.coops.remove(coops.get(i));
+  int after = this.coops.size();
+  if(after<current)
+  {
+    return true;
+  }
+  else return false;
+}
+
+
+public boolean removeStable(int i)
+{
+  int current =this.stables.size();
+  this.stables.remove(stables.get(i));
+  int after = this.stables.size();
+  if(after<current)
+  {
+    return true;
+  }
+  else return false;
+}
+
+public void SetDayOfWeek(String week)
+{
+  this.dayOfWeek = week;
+}
+
+
+public boolean addFields(Field field)
+{
+  int current = this.fields.size();
+  this.fields.add(field);
+  int after = this.fields.size();
+  if(after>current)
+  {
+    return true;
+  }
+  return false;
 }
 
 
