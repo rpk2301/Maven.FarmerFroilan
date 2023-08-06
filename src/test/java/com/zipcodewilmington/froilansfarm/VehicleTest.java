@@ -18,7 +18,7 @@ public class VehicleTest {
         Assert.assertTrue(expected, person1);
 
 
-    }
+    }//
 
     @Test
     public void makeNoiseTest() {
