@@ -79,7 +79,7 @@ public class FarmTests {
         Farm farm = new Farm();
 
         //When
-        ArrayList<Vehicle>vehicles = farm.getVehicles();
+        ArrayList<Vehicle<Botanist>>vehicles = farm.getVehicles();
 
         //Then
         Assert.assertNotNull(vehicles);
