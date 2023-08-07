@@ -1,4 +1,4 @@
-public class Edible extends Food{
+public class NonEdible extends Food{
     boolean hasBeenFertilized;
     void getisFertilized( boolean hasBeenFertilized){
         return ;
