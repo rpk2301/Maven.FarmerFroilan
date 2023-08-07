@@ -1,13 +1,17 @@
 public class FarmVehicle extends Vehicle<Farmer> implements rideable
 {
 
-    Rider<Farmer> rider;
+    public FarmVehicle()
+    {
+        super();
+    }
 
 
 
     public boolean operate(Farm f)
     {
 
+        return false;
     }
 
 
