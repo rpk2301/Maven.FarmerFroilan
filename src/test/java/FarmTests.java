@@ -35,7 +35,7 @@ public class FarmTests {
         Farm farm = new Farm();
         boolean expected = true;
         //When
-        farm.addCoop(new chickenCoop());
+        farm.addCoop(new ChickenCoop());
         boolean actual = farm.removeCoop(0);
         //Then
         Assert.assertEquals(expected, actual);
@@ -143,7 +143,7 @@ public class FarmTests {
         Farm farm = new Farm();
         //When
         boolean expected = true;
-        boolean actual= farm.addCoop(new chickenCoop());
+        boolean actual= farm.addCoop(new ChickenCoop());
         //Then
         Assert.assertEquals(expected,actual);
     }
@@ -172,7 +172,7 @@ public class FarmTests {
     public void getCoopsTest()
     {
         Farm farm = new Farm();
-        ArrayList<chickenCoop> chickencoops = farm.getCoops();
+        ArrayList<ChickenCoop> chickencoops = farm.getCoops();
         Assert.assertEquals(chickencoops.size(),0);
     }
 

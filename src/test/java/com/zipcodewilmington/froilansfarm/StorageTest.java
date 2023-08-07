@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+
 import org.junit.Test;
 
 import java.lang.reflect.Field;
@@ -49,13 +50,13 @@ class StorageTest {
     }
 
     @Test
-    public void testAddToStorage(){
-        Storage storage = new Storage();
+    public <T> void testAddToStorage(){
+        Storage<T> storage = new Storage<T>();
         T t = new T("ChickenCoop1");
 
         storage.addT(t);
 
-        List<T> tInStorage = storage.gett();
+        List<T> tInStorage = storage.getStorage();
 
         assertEquals("ChickenCoop1", tInStorage.get(0).getstorageName());
 
