@@ -35,7 +35,7 @@ public abstract class Person <T extends  Edible, r extends  rideable, a extends 
     {
 
     }
-
+//
     public<a,T> boolean Feed(a animal,T...edible)
     {
 
