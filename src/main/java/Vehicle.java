@@ -1,2 +1,9 @@
-public class Vehicle {
+public class Vehicle <p extends Person>{
+
+
+
+
+
+
+
 }
