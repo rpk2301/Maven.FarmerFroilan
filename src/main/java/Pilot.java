@@ -1,4 +1,4 @@
-public class Pilot extends Farmer {
+public class Pilot extends Farmer implements Rider {
 
 
 

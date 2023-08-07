@@ -17,25 +17,23 @@ public abstract class Person <T extends  Edible, r extends  rideable, a extends 
     }
     }
 
-    public <r> boolean Mount(r rideable) {
+    public <r> boolean Mount(r rideable)
+    {
 
        return false;
     }
 
 
-    public String makenoise() {
-
+    public String makenoise()
+    {
+        return "Hi!";
     }
 
-    public boolean RideAllHorses()
+
+    public boolean Feed(a animal,T edible)
     {
-
-    }
-
-    public<a,T> boolean Feed(a animal,T...edible)
-    {
-
-
+        animal.eat(edible);
+        return true;
     }
 
 

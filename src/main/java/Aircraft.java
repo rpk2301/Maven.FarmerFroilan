@@ -1,4 +1,6 @@
-public interface Aircraft extends Vehicle<Botanist> {
+public interface Aircraft
+
+{
 
     public boolean fly();
 
