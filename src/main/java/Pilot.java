@@ -1,4 +1,4 @@
-public class Pilot extends Person implements Rider<Aircraft>{
+public class Pilot extends Person {
 
 
 

@@ -6,7 +6,7 @@ public class Farm
   private ArrayList<chickenCoop>coops = new ArrayList<chickenCoop>();
   private Farmhouse farmhouse=new Farmhouse();
   private ArrayList<Field> fields = new ArrayList<Field>();
-  private ArrayList <Vehicle> vehicles = new ArrayList<Vehicle>();
+  private ArrayList <Vehicle<Botanist>> vehicles = new ArrayList<Vehicle<Botanist>>();
 
   String dayOfWeek;
 
@@ -35,7 +35,7 @@ public boolean addStable(Stable stable)
 }
 
 
-public ArrayList<Vehicle> getVehicles()
+public ArrayList<Vehicle<Botanist>> getVehicles()
 {
   return this.vehicles;
 

@@ -1,4 +1,4 @@
-public class Horse {
+public class Horse implements rideable {
 
 
     boolean isHungry = true;

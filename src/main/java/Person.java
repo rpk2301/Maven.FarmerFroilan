@@ -1,22 +1,30 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 
-public abstract class Person <T extends  Edible, r extends  rideable, a extends  Animal> {
+public abstract class Person <T extends  Edible, r extends  rideable, a extends  Animal> implements Rider {
 
     String name;
     boolean isHungry;
-    HashMap<T, Integer> inStomach;
+    private ArrayList<T>  inStomach = new ArrayList<T>();
 
 
-    public <T> void eat(T... edible) {
-
+    public  void eat(T... edible)
+    {
+    for(T list: edible)
+    {
+        inStomach.add(list);
+    }
     }
 
-    public <r> void Mount() {
+    public <r> boolean Mount(r rideable) {
 
+        rideable.
     }
 
-    public <r> void Dismount() {
+    public <r> boolean Dismount() {
 
+        return false;
     }
 
     public String makenoise() {
