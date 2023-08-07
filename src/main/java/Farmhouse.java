@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Farmhouse {
+public class Farmhouse extends Storage<Person>{
 
     ArrayList<Person> people = new ArrayList<Person>();
 

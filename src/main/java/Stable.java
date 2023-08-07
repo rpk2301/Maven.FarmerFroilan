@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Stable {
+public class Stable extends Storage<Horse> {
 
     ArrayList<Horse> horses = new ArrayList<Horse>();
 

@@ -3,9 +3,8 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.ArrayList;
 
-public class Storage<T> {
-    ArrayList<T> storage = new ArrayList<T>();
-    private int index;
+public abstract class Storage<T> {
+    ArrayList<T> storage;
 
 
     public void addT(T t) {
@@ -17,11 +16,7 @@ public class Storage<T> {
         return storage;
     }
 
-    public T getT(int index){
-        if (index >= 0 && index < storage.size()) {
-            return storage.get(index);
-        }
-        return null;
-
+    public T get(int index) {
+        return storage.get(index);
     }
 }

@@ -8,11 +8,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class StorageTest {
-
+public class StorageTest {
     @Test
-    public void testAddPersonToChickenCoop(){
-        ChickenCoop chickenCoop = new ChickenCoop();
+    public void testAddPersonToChickenCoop() {
+
+        //ChickenCoop chickenCoop = new ChickenCoop();
         Chicken chickens = new Chicken("littleChick");
 
         chickenCoop.addChicken(chickens);
@@ -24,7 +24,7 @@ class StorageTest {
     }
 
     @Test
-    public void testAddPersonToFarmHouse(){
+    public void testAddPersonToFarmHouse() {
         Farmhouse farmhouse = new Farmhouse();
         Person people = new Person("Froilan");
 
@@ -37,7 +37,7 @@ class StorageTest {
     }
 
     @Test
-    public void testAddHorseToStable(){
+    public void testAddHorseToStable() {
         Stable stable = new Stable();
         Horse horses = new Horse("bigHorse");
 
@@ -50,7 +50,7 @@ class StorageTest {
     }
 
     @Test
-    public <T> void testAddToStorage(){
+    public <T> void testAddToStorage() {
         Storage<T> storage = new Storage<T>();
         T t = new T("ChickenCoop1");
 
@@ -63,7 +63,7 @@ class StorageTest {
     }
 
     @Test
-    public void testGetHorse(){
+    public void testGetHorse() {
         Stable stable = new Stable();
         Horse horses1 = new Horse("bigHorse");
         Horse horses2 = new Horse("SmallHorse");
@@ -77,11 +77,10 @@ class StorageTest {
         assertEquals(1, indexOfHorse2);
 
 
-
     }
 
     @Test
-    public void testGetPerson(){
+    public void testGetPerson() {
         Farmhouse farmhouse = new Farmhouse();
         Person people1 = new Person("Froilan");
         Person people2 = new Person("Frolinda");
@@ -98,7 +97,7 @@ class StorageTest {
     }
 
     @Test
-    public void testGetChicken(){
+    public void testGetChicken() {
         ChickenCoop chickenCoop = new ChickenCoop();
         Chicken chickens1 = new Chicken("Chick1");
         Chicken chickens2 = new Chicken("Chick2");
@@ -115,7 +114,7 @@ class StorageTest {
     }
 
     @Test
-    public void testGetStorage(){
+    public void testGetStorage() {
         Storage storage = new Storage();
         T t1 = new T("ChickenCoop");
         T t2 = new T("Stable");
@@ -131,7 +130,7 @@ class StorageTest {
     }
 
     @Test
-    public void testGetFieldChickenCoop(){
+    public void testGetFieldChickenCoop() {
         ChickenCoop chickenCoop = new ChickenCoop();
         Chicken chickens = new Chicken("littleChick");
 
@@ -147,7 +146,7 @@ class StorageTest {
     }
 
     @Test
-    public void testGetFieldFarmHouse(){
+    public void testGetFieldFarmHouse() {
         Farmhouse farmhouse = new Farmhouse();
         Person people = new Person("Froilan");
 
@@ -163,7 +162,7 @@ class StorageTest {
     }
 
     @Test
-    public void testGetFieldStable(){
+    public void testGetFieldStable() {
         Stable stable = new Stable();
         Horse horses = new Horse("bigHorse");
 
@@ -179,7 +178,7 @@ class StorageTest {
     }
 
     @Test
-    public void testGetFieldStorage() throws NoSuchFieldException, IllegalAccessException{
+    public void testGetFieldStorage() throws NoSuchFieldException, IllegalAccessException {
         Storage storage = new Storage();
         T t = new T("ChickenCoop1");
 
@@ -188,10 +187,10 @@ class StorageTest {
         List<T> tInStorage = storage.gett();
         Field nameField = T.class.getDeclaredField("name");
         nameField.setAccessible(true);
-        String nameValue =(String) nameField.get(tInStorage.get(0));
+        String nameValue = (String) nameField.get(tInStorage.get(0));
 
         assertEquals("ChickenCoop1", nameValue);
 
     }
-
 }
+

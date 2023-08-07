@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ChickenCoop{
+public class ChickenCoop extends Storage<Chicken>{
 
     ArrayList<Chicken> chickens = new ArrayList<Chicken>();
 
