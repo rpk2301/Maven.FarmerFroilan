@@ -1,6 +1,15 @@
-public class Tractor extends FarmVehicle implements rideable {
+public class Tractor extends FarmVehicle<Person> implements rideable {
 
 
-    Rider farmer;
+    public Tractor()
+    {
+        super();
+    }
+
+
+    public boolean harvest(Crop p)
+    {
+
+    }
 
 }

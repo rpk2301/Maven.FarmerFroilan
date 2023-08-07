@@ -2,11 +2,12 @@ import java.util.ArrayList;
 
 public class Farm
 {
+
   private ArrayList<Stable> stables = new ArrayList<Stable>();
   private ArrayList<chickenCoop>coops = new ArrayList<chickenCoop>();
   private Farmhouse farmhouse=new Farmhouse();
   private ArrayList<Field> fields = new ArrayList<Field>();
-  private ArrayList <Vehicle<Botanist>> vehicles = new ArrayList<Vehicle<Botanist>>();
+  private ArrayList <Vehicle> vehicles = new ArrayList<Vehicle>();
 
   String dayOfWeek;
 
@@ -35,7 +36,7 @@ public boolean addStable(Stable stable)
 }
 
 
-public ArrayList<Vehicle<Botanist>> getVehicles()
+public ArrayList<Vehicle> getVehicles()
 {
   return this.vehicles;
 
@@ -85,17 +86,55 @@ public boolean removeFarmHouse()
   else return false;
 }
 
-public boolean checkHorses(ArrayList<Stable> stables)
-{
-for(int i =0; i<stables.size();i++)
-{
-  for(int j=0;j<stables.get(i).size();j++)
-  {
+  public void setStables(ArrayList<Stable> stables) {
+    this.stables = stables;
+  }
+
+  public void setCoops(ArrayList<chickenCoop> coops) {
+    this.coops = coops;
+  }
+
+  public void setFarmhouse(Farmhouse farmhouse) {
+    this.farmhouse = farmhouse;
+  }
+
+  public ArrayList<Field> getFields() {
+    return fields;
+  }
+
+  public void setFields(ArrayList<Field> fields) {
+    this.fields = fields;
+  }
+
+  public void setVehicles(ArrayList<Vehicle> vehicles) {
+    this.vehicles = vehicles;
+  }
+
+  public void setDayOfWeek(String dayOfWeek) {
+    this.dayOfWeek = dayOfWeek;
+  }
+
+
+public boolean checkHorses(ArrayList<Stable> stables) {
+  for (int i = 0; i < stables.size(); i++) {
+    for (int j = 0; j < stables.get(i).getHorses().size(); j++) {
+      if (stables.get(i).getHorses().get(j).getIsRidden() == false) {
+        return false;
+      }
+    }
 
   }
-}
+  return true;
 }
 
+  public void resetHorses(ArrayList<Stable> stables) {
+    for (int i = 0; i < stables.size(); i++) {
+      for (int j = 0; j < stables.get(i).getHorses().size(); j++)
+      {
+        stables.get(i).getHorses().get(j).setRidden(false);
+      }
+    }
+  }
 
 public boolean removeCoop(int i)
 {
@@ -126,6 +165,9 @@ public void SetDayOfWeek(String week)
 {
   this.dayOfWeek = week;
 }
+
+
+
 
 
 public boolean addFields(Field field)

@@ -1,4 +1,4 @@
-public class Pilot extends Person {
+public class Pilot extends Farmer {
 
 
 
@@ -14,4 +14,7 @@ public class Pilot extends Person {
     }
 
 
+    public boolean Mount() {
+        return false;
+    }
 }

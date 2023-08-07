@@ -1,4 +1,4 @@
-public class FarmVehicle extends Vehicle<Farmer> implements rideable
+public class FarmVehicle<P extends Farmer> extends Vehicle<P> implements rideable
 {
 
     public FarmVehicle()

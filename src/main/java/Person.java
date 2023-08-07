@@ -19,13 +19,9 @@ public abstract class Person <T extends  Edible, r extends  rideable, a extends 
 
     public <r> boolean Mount(r rideable) {
 
-        rideable.
+       return false;
     }
 
-    public <r> boolean Dismount() {
-
-        return false;
-    }
 
     public String makenoise() {
 
