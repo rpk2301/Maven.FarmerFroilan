@@ -4,7 +4,7 @@ public class Farm
 {
 
   private ArrayList<Stable> stables = new ArrayList<Stable>();
-  private ArrayList<chickenCoop>coops = new ArrayList<chickenCoop>();
+  private ArrayList<ChickenCoop>coops = new ArrayList<ChickenCoop>();
   private Farmhouse farmhouse=new Farmhouse();
   private ArrayList<Field> fields = new ArrayList<Field>();
   private ArrayList <Vehicle> vehicles = new ArrayList<Vehicle>();
@@ -50,7 +50,7 @@ public String getDayOfWeek()
 }
 
 
-  public boolean addCoop(chickenCoop coop)
+  public boolean addCoop(ChickenCoop coop)
   {
     int current = this.coops.size();
     this.coops.add(coop);
@@ -62,7 +62,7 @@ public String getDayOfWeek()
     return false;
   }
 
-  public ArrayList<chickenCoop> getCoops()
+  public ArrayList<ChickenCoop> getCoops()
   {
     return this.coops;
   }
