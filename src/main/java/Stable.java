@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
-public class Stable extends Storage<Horse> {
+public class Stable {
+
+
 
     ArrayList<Horse> horses = new ArrayList<Horse>();
 
@@ -12,12 +14,9 @@ public class Stable extends Storage<Horse> {
         this.horses = horses;
     }
 
-    public Horse getPerson(int index) {
-        if (index >= 0 && index < horses.size()) {
-            return horses.get(index);
-        }
-        return null;
-
+    public void addHorse(Horse p)
+    {
+        horses.add(p);
     }
 
 

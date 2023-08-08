@@ -18,5 +18,4 @@ public class Crop extends Food{
     boolean setFertilized(boolean hasBeenFertilized){return hasBeenFertilized; }
 
 
-    }
-
+}

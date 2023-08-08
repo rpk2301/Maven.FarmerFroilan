@@ -1,6 +1,6 @@
-public class EdibleEgg extends Edible {
+public class EdibleEgg extends Edible
+{
     boolean getisFertilized() {
         return true;
     }
 }
-

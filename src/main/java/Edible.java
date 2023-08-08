@@ -1,6 +1,7 @@
-public class Edible extends Food{
-    boolean hasBeenFertilized;
-    void getisFertilized( boolean hasBeenFertilized){
-        return ;
+public class Edible extends Food {
+    private boolean hasBeenFertilized;
+
+    public boolean getisFertilized(boolean hasBeenFertilized) {
+        return hasBeenFertilized;
     }
 }

@@ -1,4 +1,4 @@
-public class Tractor extends FarmVehicle<Person> implements rideable {
+public class Tractor extends FarmVehicle<Farmer> implements rideable {
 
 
     public Tractor()
@@ -9,7 +9,7 @@ public class Tractor extends FarmVehicle<Person> implements rideable {
 
     public boolean harvest(Crop p)
     {
-
+    return true;
     }
 
 }

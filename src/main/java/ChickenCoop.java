@@ -22,5 +22,4 @@ public class ChickenCoop extends Storage<Chicken>{
         return null;
 
     }
-    }
-
+}

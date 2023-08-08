@@ -1,21 +1,20 @@
-package com.zipcodewilmington.froilansfarm;
 import org.junit.Assert;
 import org.junit.Test;
 public class VehicleTest {
     @Test
     public void setRiderTest() {
         //Given
-        Vehicle vehicle = new Vehicle;
+        Vehicle vehicle = new Vehicle();
 
         //When
-        Person person1 = new Person("Froilan");
+        Farmer person1 = new Farmer("Froilan");
         vehicle.setRider(person1);
 
 
         //Then
-        Person expected = vehicle.getRider();
+        Farmer expected = (Farmer) vehicle.getRider();
 
-        Assert.assertTrue(expected, person1);
+        Assert.assertEquals(person1,expected);
 
 
     }//
@@ -23,13 +22,13 @@ public class VehicleTest {
     @Test
     public void makeNoiseTest() {
         //Given
-        Vehicle vehicle = new Vehicle;
+        Vehicle vehicle = new Vehicle();
 
         //When
         String actual = vehicle.makeNoise();
 
         //Then
-        String expected = "Vroom";
+        String expected = "Vroom Vroom";
         Assert.assertEquals(expected, actual);
 
 
@@ -40,11 +39,11 @@ public class VehicleTest {
 
         //Given
         Vehicle vehicle = new Vehicle();
-        Person person = new Person();
+        Farmer person = new Farmer("Froilan");
         boolean truee = true;
 
         //When
-        Boolean actual = vehicle.isMounted(truee);
+        Boolean actual = vehicle.isMounted();
 
         //Then
         boolean expected = true;
@@ -55,8 +54,8 @@ public class VehicleTest {
     @Test
     public void TractorTest() {
 
-        FarmVehicle tractor = new Tractor;
-        Farm farm = new Farm;
+        FarmVehicle tractor = new Tractor();
+        Farm farm = new Farm();
 
         Boolean actual = tractor.operate(farm);
 
@@ -66,23 +65,23 @@ public class VehicleTest {
 
     @Test
     public void TractorHarvestTest() {
-        FarmVehicle tractor = new Tractor;
-        Farm farm = new Farm;
+        Tractor tractor = new Tractor();
+        Farm farm = new Farm();
         boolean truee = true;
 
 
-        boolean actual = tractor.havest(crops);
+        boolean actual = tractor.harvest(new Crop());
 
-        boolean expected = true;
-        Assert.assertEquals(expected, actual);
+
+        Assert.assertTrue(actual);
 
     }
 
     @Test
     public void TractorSetRiderTest() {
         //Given
-        FarmVehicle tractor = new Tractor;
-        Farm farm = new Farm;
+        FarmVehicle tractor = new Tractor();
+        Farm farm = new Farm();
         Person  farmer = new Farmer("Froilan");
 
 
@@ -90,22 +89,22 @@ public class VehicleTest {
         tractor.setRider(farmer);
 
         //Then
-        Farmer expected = tractor.getRider();
+        Farmer expected = (Farmer) tractor.getRider();
 
-        Assert.assertTrue(expected, farmer);
+        Assert.assertEquals(expected, farmer);
 
     }
     @Test
     public void CropDusterFertilizeTest(){
 
-        FarmVehicle cropduster = new CropDuster;
-        Pilot  pilot = new Pilot;
+        CropDuster cropduster = new CropDuster();
+        Pilot  pilot = new Pilot();
+        CropRow crops = new CropRow();
 
-        Boolean expected = true;
 
-        boolean actual = cropduster.fertilize(cropRow);
+        boolean actual = cropduster.fertilize(crops);
 
-        Assert.assertTrue(expected,actual);
+        Assert.assertFalse(actual);
 
     }
 

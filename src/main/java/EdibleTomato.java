@@ -1,6 +1,10 @@
 public class EdibleTomato extends Edible {
-    boolean getisFertilized() {
+
+
+
+
+    boolean getisFertilized()
+    {
         return true;
     }
 }
-

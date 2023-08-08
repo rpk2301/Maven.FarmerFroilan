@@ -1,8 +1,8 @@
 
-public class EdibleEarCorn extends Edible {
-    boolean getisFertilized() {
-        return true;
-    }
+    public class EdibleEarCorn extends Edible {
+        boolean getisFertilized() {
+            return true;
+        }
 
-}
+    }
 

@@ -90,7 +90,7 @@ public boolean removeFarmHouse()
     this.stables = stables;
   }
 
-  public void setCoops(ArrayList<chickenCoop> coops) {
+  public void setCoops(ArrayList<ChickenCoop> coops) {
     this.coops = coops;
   }
 
@@ -115,7 +115,8 @@ public boolean removeFarmHouse()
   }
 
 
-public boolean checkHorses(ArrayList<Stable> stables) {
+public boolean checkHorses(ArrayList<Stable> stables)
+{
   for (int i = 0; i < stables.size(); i++) {
     for (int j = 0; j < stables.get(i).getHorses().size(); j++) {
       if (stables.get(i).getHorses().get(j).getIsRidden() == false) {
@@ -127,13 +128,14 @@ public boolean checkHorses(ArrayList<Stable> stables) {
   return true;
 }
 
-  public void resetHorses(ArrayList<Stable> stables) {
+  public boolean resetHorses(ArrayList<Stable> stables) {
     for (int i = 0; i < stables.size(); i++) {
       for (int j = 0; j < stables.get(i).getHorses().size(); j++)
       {
         stables.get(i).getHorses().get(j).setRidden(false);
       }
     }
+    return true;
   }
 
 public boolean removeCoop(int i)

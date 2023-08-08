@@ -2,7 +2,10 @@ public class Farmer<e extends Edible,t extends Tractor,a extends Animal> extends
 
     Farm froilansFarm;
 
-
+    public Farmer(String froilan)
+    {
+        super(froilan);
+    }
     public boolean Mount() {
         return false;
     }

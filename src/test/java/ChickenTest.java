@@ -8,14 +8,14 @@ public class ChickenTest {
     public void TestYieldTrue()
     {
         //Given
-        Chicken chicken = new Chicken();
+        Chicken chicken = new Chicken("Jeff");
         boolean trueee = true;
 
         //When
-       EddibleEgg food = chicken.yield(trueee);
+       EdibleEgg food = (EdibleEgg) chicken.yield(trueee);
 
        //Then
-       Assert.assertTrue(food instanceof EddibleEgg);
+       Assert.assertTrue(food instanceof EdibleEgg);
 
     }
 
@@ -25,14 +25,14 @@ public class ChickenTest {
     public void TestYieldFalse()
     {
         //Given
-        Chicken chicken = new Chicken();
+        Chicken chicken = new Chicken("Jeff");
         boolean falseee = false;
 
         //When
-        nonEddibleEgg food = chicken.yield(falsee);
+        NonEdibleEgg food = (NonEdibleEgg) chicken.yield(false);
 
         //Then
-        Assert.assertTrue(food instanceof nonEddibleEgg);
+        Assert.assertTrue(food instanceof NonEdibleEgg);
 
     }
 

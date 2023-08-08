@@ -56,7 +56,7 @@ public class FarmTests {
         Farm farm = new Farm();
 
         boolean expected = true;
-        boolean actual = farm.CheckHorses(farm.getStables());
+        boolean actual = farm.checkHorses(farm.getStables());
     }
 
     @Test
@@ -79,7 +79,7 @@ public class FarmTests {
         Farm farm = new Farm();
 
         //When
-        ArrayList<Vehicle<Botanist>>vehicles = farm.getVehicles();
+        ArrayList<Vehicle>vehicles = farm.getVehicles();
 
         //Then
         Assert.assertNotNull(vehicles);
@@ -129,7 +129,7 @@ public class FarmTests {
     {
         Farm farm = new Farm();
 
-        Boolean actual = farm.resetHorses();
+        Boolean actual = farm.resetHorses(farm.getStables());
 
         Assert.assertTrue(actual);
     }

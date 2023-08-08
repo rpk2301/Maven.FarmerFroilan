@@ -9,26 +9,25 @@ public class HorseTests {
 public void makeNoiseTest()
 {
     //Given
-    Horse horse = new Horse();
+    Horse horse = new Horse("Jeff");
     //When
-    String actual = horse.makeNoise();
+    String actual = horse.MakeNoise();
     //Then
-    String expected = "Bark";
+    String expected = "MurMurMur";
     Assert.assertEquals(actual,expected);
 }
 @Test
     public void testEat()
 {
     //Given
-    Horse horse = new Horse();
+    Horse horse = new Horse("Jeff");
     //When
-    horse.eat(new EddibleEarCorn);
+    horse.eat(new EdibleEarCorn());
     //Then
-    Assert.assertTrue(horse.stomach.size()>0);
+    Assert.assertTrue(horse.getInStomach().size()>0);
 }
 
-@Test
-    public void
+
 
 
 

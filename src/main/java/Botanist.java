@@ -1,9 +1,11 @@
 public class Botanist extends Person{
 
 
+    public Botanist(String name) {
+        super(name);
+    }
 
-
-    public void plant(Crop c,CropRow, r)
+    public void plant(Crop c, CropRow r)
     {
 
     }
